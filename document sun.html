@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+          body {
+                 margin: 0;
+                 height: 100vh;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 background-image:url('moon.jpg');
+                 background-size: 100%;
+              }
+              
+         .container {
+                    font-size: 10px;
+                    width: 50em;
+                    height: 50em;
+                    position: relative;
+              }
+
+              .sun {
+                   position: absolute;
+                   top: 15em;
+                   left: 15em;
+                   width: 10em;
+                   height: 10em;
+                   background-color: yellow;
+                   border-radius: 50%;
+                   box-shadow: 0 0 3em white;
+                }
+
+                .neptune {
+                    position: absolute;
+                    top: 40em;
+                    left: 30em;
+                    width: 6em;
+                    height: 6em;
+                    background-color: rgb(81, 47, 75);
+                    border-radius: 50%;
+                    box-shadow: 0 0 3em white;
+                 }
+               .earth,.moon {
+                        position: absolute;
+                        border-style: solid;
+                        border-color: white
+                        transparent
+                        transparent
+                        transparent;
+                        border-width: 0.1em 0.1em 0 0;
+                        border-radius: 50%;
+                    
+                    }
+
+
+                .earth {
+                    top: em;
+                    left: 5em;
+                    width: 30em;
+                    height: 30em;
+                    animation: orbit 36.4s
+                 linear infinite;
+                 
+                    
+                }
+                .moon {
+                    top: 0;
+                    right: 0;
+                    width: 10em;
+                    height: 10em;
+                    animation: orbit 10s
+                    linear infinite;
+
+                }
+                .earth::before,
+                .moon::before {
+                    content: '';
+                    position: absolute;
+                    border-radius: 100%;
+                    animation: orbit 10s
+                    linear infinite;
+
+                }
+                .earth::before {
+                    top: 2.8em;
+                    right: 2.8em;
+                    width: 3em;
+                    height: 3em;
+                    background-color: aqua;
+
+                }
+                .moon::before {
+                    top: 0.8em;
+                    right: 0.8em;
+                    width: 1.2em;
+                    height: 1.2em;
+                    background-color:silver;
+
+                }
+
+                
+
+                @keyframes orbit {
+                    from {
+                      transform: rotate(0deg);
+                    }
+                    to {
+                      transform: rotate(359deg);
+                    }
+                  }
+
+                  
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sun"></div>
+            <div class="neptune"></div>
+            <div class="earth rotate">
+                <div class="moon"></div>
+            </div>
+
+        </div>
+    </body>
+
+</html>
