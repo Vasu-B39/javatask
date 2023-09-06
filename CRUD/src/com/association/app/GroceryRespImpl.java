@@ -20,7 +20,5 @@ public class GroceryRespImpl implements GroceryResp{
 		System.out.println("Items "+grocery +"position in "+this.position);
 		this.position++;
 	}
-
 	
-
 }
